@@ -1,0 +1,23 @@
+package com.avgona.rss.sender.services.Impl;
+
+import com.avgona.rss.sender.entities.Rss;
+import com.avgona.rss.sender.repositories.RssRepository;
+import com.avgona.rss.sender.services.RssService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class RssServiceImpl implements RssService {
+
+    private final RssRepository rssRepository;
+
+    @Autowired
+    public RssServiceImpl(RssRepository rssRepository) {
+        this.rssRepository = rssRepository;
+    }
+
+    @Override
+    public void save(Rss rss) {
+        rssRepository.save(rss);
+    }
+}
