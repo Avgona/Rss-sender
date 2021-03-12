@@ -49,9 +49,9 @@
 
         <!-- .......................... E-MAIL ..........................-->
         <dependency>
-            <groupId>it.ozimov</groupId>
-            <artifactId>spring-boot-email-core</artifactId>
-            <version>0.6.3</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>2.3.4.RELEASE</version>
         </dependency>
 
 
