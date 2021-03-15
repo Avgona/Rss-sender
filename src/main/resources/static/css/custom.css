@@ -1,14 +1,15 @@
 .navbar {
     position: relative;
     display: inline-block;
-    left: 87%;
+    left: 40%;
     align-items: center;
     justify-content: space-between;
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
-#exampleFormControlTextarea1
-{
+#exampleFormControlDiv {
     position: relative;
-    height: 650px;
+    height: 450px;
+    overflow: auto;
+    overflow-x: hidden;
 }

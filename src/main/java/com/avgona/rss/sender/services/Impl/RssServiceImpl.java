@@ -20,4 +20,14 @@ public class RssServiceImpl implements RssService {
     public void save(Rss rss) {
         rssRepository.save(rss);
     }
+
+    @Override
+    public String composeText(String header, String context, String link){
+        return String.format(
+                "<html><head><style>img {width: %s;}</style></head><body>" +
+                        "<h3 style='text-align:center'>%s</h3>" +
+                        "\t<p'>%s</p>" +
+                        "<br />Link : %s" +
+                        "</body></html>", "100%", header, context, link);
+    }
 }
