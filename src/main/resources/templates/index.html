@@ -13,13 +13,13 @@
     </head>
 
     <body>
-        <form th:action="@{/process}" th:object="${action}" method="POST" class="container-fluid justify-content-end">
+        <form th:action="@{/process}" th:object="${rssObj}" method="POST" class="container-fluid justify-content-end">
             <header>
                 <nav class="navbar navbar-light bg-light">
                         <input type="hidden" th:field="*{id}" />
-                        <button class="btn btn-outline-success me-2" type="submit" name="save" value="save">Save</button>
-                        <button class="btn btn-outline-secondary me-2" type="submit" name="preview" value="preview">Preview</button>
-                        <button class="btn btn-outline-danger me-2" type="submit" name="send" value="send">Send</button>
+                        <button class="btn btn-outline-success me-2" type="submit" name="action" value="save">Save</button>
+                        <button class="btn btn-outline-secondary me-2" type="submit" name="action" value="preview">Preview</button>
+                        <button class="btn btn-outline-danger me-2" type="submit" name="action" value="send">Send</button>
                 </nav>
             </header>
 

@@ -19,5 +19,4 @@ public class Rss {
 
     @Column(name = "rss")
     private String rss;
-
 }

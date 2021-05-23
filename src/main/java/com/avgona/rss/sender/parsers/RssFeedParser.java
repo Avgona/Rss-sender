@@ -17,28 +17,18 @@ import javax.xml.stream.events.XMLEvent;
 
 @Component
 public class RssFeedParser {
+    private URL url;
     private static final String TITLE = "title";
     private static final String DESCRIPTION = "description";
     private static final String LINK = "link";
     private static final String ITEM = "item";
 
 
-    private URL url;
-
-    public void setUrl(String url){
-        try {
-            this.url = new URL(url);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
     public Feed readFeed() {
         Feed feed = null;
         try {
             boolean isFeedHeader = true;
-            // Set header values intial to the empty string
+            // Set header values initial to the empty string
             String description = "";
             String title = "";
             String link = "";
@@ -110,6 +100,14 @@ public class RssFeedParser {
         try {
             return url.openStream();
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void setUrl(String url){
+        try {
+            this.url = new URL(url);
+        } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
     }

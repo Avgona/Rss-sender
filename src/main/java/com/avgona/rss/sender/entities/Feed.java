@@ -1,6 +1,5 @@
 package com.avgona.rss.sender.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

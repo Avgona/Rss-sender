@@ -1,0 +1,10 @@
+<?xml version ="1.0" encoding ="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <include file="2021-05-20--1--create-email-rss.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-22--2--insert-default-data.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog >
